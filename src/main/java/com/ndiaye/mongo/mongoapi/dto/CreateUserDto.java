@@ -13,7 +13,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CreateUserDto {
-    private String id;
     private String firstname;
     private String lastname;
     private String username;
@@ -23,15 +22,6 @@ public class CreateUserDto {
     private String zipCode;
     private String city;
     private String country;
-    private LocalDateTime createdAt;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getFirstname() {
         return firstname;
@@ -105,11 +95,4 @@ public class CreateUserDto {
         this.country = country;
     }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
 }

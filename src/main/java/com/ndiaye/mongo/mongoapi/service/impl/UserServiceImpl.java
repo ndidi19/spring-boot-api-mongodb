@@ -7,6 +7,7 @@ import com.ndiaye.mongo.mongoapi.repository.UserRepository;
 import com.ndiaye.mongo.mongoapi.service.IUserService;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -37,6 +38,7 @@ public class UserServiceImpl implements IUserService {
         u.setUsername(createUserDto.getUsername());
         u.setEmail(createUserDto.getEmail());
         u.setGender(createUserDto.getGender());
+        u.setCreatedAt(LocalDateTime.now());
         u.setAddress(address);
         return userRepository.insert(u);
     }
